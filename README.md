@@ -16,7 +16,7 @@ This code is to generate a Machine Learning REST service using AWS
 7. Leave the rest and click on create Function
 8. Generate BestModel.p as https://github.com/kopepod/BestModel
 8. Edit _lambda_function.py_ as
-```
+```python
 # lambda_function.py
 import json
 import pickle
@@ -61,13 +61,13 @@ def lambda_handler(event, context):
 
 ## Curl
 Generate the following bash script and save it, e.g., mybash.sh
-```
+```bash
 curl -X POST \
   'https://{APIgate}.execute-api.{zone}.amazonaws.com/{myfunction}' \
   -H 'content-type: application/json' \
   -d '{"x":"4.4,3.5,5.5,4.6"}' 
 ```
 Run your bash
-```
+```bash
 bash mybash.sh
 ```
